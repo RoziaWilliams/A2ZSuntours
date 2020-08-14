@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - A2ZSuntours </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #14343e;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            margin-top: 300px;
+            padding-left: 15%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="
+    width: auto;
+">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("A2ZSunTours", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*Menu Name/View Name/Controller Name*@
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @* <li>@Html.ActionLink("About", "About", "Home")</li>
+        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+
+                    <li>@Html.ActionLink("History", "History", "History")</li>
+                    <li>@Html.ActionLink("Gallery", "Gallery", "Gallery")</li>
+                    <li>@Html.ActionLink("Plan Your Tour", "Tours", "Tour")</li>
+                    <li>@Html.ActionLink("Events and Calendar", "EventsAndCalendar", "EventsAndCalendar")</li>
+                    <li>@Html.ActionLink("About Us", "AboutUs", "AboutUs")</li>
+                    <li>@Html.ActionLink("Contact Us", "ContactUs", "ContactUs")</li>
+                    @*<li>@Html.ActionLink("Reviews", "Reviews", "Reviews")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+
+        <div class="footer">
+                <!-- Footer -->
+                <footer class="page-footer font-small mdb-color pt-4">
+
+                    <!-- Footer Links -->
+                    <div class="container text-center text-md-left">
+
+                        <!-- Footer links -->
+                        <div class="row text-center text-md-left mt-3 pb-3">
+
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h3 class="text-uppercase mb-4 font-weight-bold">A2ZSuntours</h3>
+                                <p>
+                                    Come experience St Lucia in the hands of a professional.
+                                </p>
+                            </div>
+                            <!-- Grid column
+
+        <hr class="w-100 clearfix d-md-none">-->
+                            <!-- Grid column -->
+                            <div class="container">
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                    <h4 class="text-uppercase mb-4 font-weight-bold">St Lucia</h4>
+                                    <p>
+                                        Simply the Best!
+                                    </p>
+                                    <p>
+                                       Come Visit Us
+                                    </p>
+                                   
+                                </div>
+                                <!-- Grid column
+
+    <hr class="w-100 clearfix d-md-none">-->
+                                <!-- Grid column
+    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h4 class="text-uppercase mb-4 font-weight-bold">Useful links</h4>
+        <p>
+            <a href="#!">Your Account</a>
+        </p>
+        <p>
+            <a href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+            <a href="#!">Shipping Rates</a>
+        </p>
+        <p>
+            <a href="#!">Help</a>
+        </p>
+    </div>-->
+                                @* <!-- Grid column
+        <hr class="w-100 clearfix d-md-none">-->
+                                <!-- Grid column -->
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                                    <h4 class="text-uppercase mb-4 font-weight-bold">Contact</h4>
+                                    <p>
+                                        <i class="fas fa-home mr-3"></i> Castries, St Lucia
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-envelope mr-3"></i> A2ZSuntours@gmail.com
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-phone mr-3"></i> + 758 484 6354
+                                    </p>
+                                    <p>
+                                        <i class="fas fa-print mr-3"></i> + 758 484 6354
+                                    </p>
+                                </div>*@
+                            </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Footer links -->
+
+                    
+
+                    <!-- Grid row -->
+                    <div class="row d-flex align-items-center">
+
+                        <!-- Grid column -->
+
+                            <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-5 col-lg-4 ml-lg-0">
+
+                                <!-- Social buttons -->
+                                <div class="text-center text-md-right">
+                                    <ul class="list-unstyled list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-google-plus-g"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="btn-floating btn-sm rgba-white-slight mx-1">
+                                                <i class="fab fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <!-- Grid column -->
+
+                        </div>
+                    <!-- Grid row -->
+
+                </div>
+                <!-- Footer Links -->
+
+            </footer>
+            <!-- Footer -->
+            <hr />
+            <p>&copy; @DateTime.Now.Year - A2ZSunTours</p>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

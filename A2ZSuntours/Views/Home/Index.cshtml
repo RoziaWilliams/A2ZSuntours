@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    @*<meta id="viewport" content="width=device-width, intial-scale=1">
+        <meta id="viewport" name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">*@
+    <style>
+        .carousel-inner img {
+            width: 100%;
+            height: 100px;
+        }
+
+        .side {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+
+        p.intro {
+            text-align: center;
+            font-size: 20px;
+            padding-bottom: 100px;
+        }
+
+        h1.intro {
+            text-align: center;
+            font-size: 48px;
+           /* font-family: Harrington;*/
+        }
+
+        h2.intro {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+            <li data-target="#homeCarousel" data-slide-to="2"></li>
+            <li data-target="#homeCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="~/Images/Home/Sunset.jpg" alt="L">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/Home/waterpark.jpg" alt="C">
+            </div>
+
+            <div class="item">
+                <img src="~/Images/Home/dock.jpg" alt="New York">
+            </div>
+            <div class="item">
+                <img src="~/Images/Home/St-Lucia.jpg" alt="New York">
+            </div>
+        </div>
+        <br />
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#homeCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#homeCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+
+    <div class="side">
+        <!--Intro paragraph-->
+        <div>
+            <h1 class="intro"> Welcome to Paradise!!</h1>
+            <p class="intro">
+                <br />We at A2ZSunTours have committed to make your experience here a
+                memorable one. Let us show you why we are called the <b>Helen of the West!!</b>
+            </p>
+        </div>
+
+        @*<div class="jumbotron">
+                <h1>ASP.NET</h1>
+                <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+                <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+            </div>*@
+
+        <div class="row">
+            <div class="col-md-4">
+                <h2 style="text-align:center;"> History</h2>
+                <img src="~/Images/Home/history.jpg" class="rounded-circle" alt="Cinque Terre" width="300" height="200" >
+                <br /><br />
+                <p style="font-family:Bell MT; font-size:16px;">
+                    Come experience St Lucia's rich culture, with A2ZSuntours founder Venantius Popo. Come re-live the exchange of hands
+                    between the English and french, as they battle for this beautiful island. Or listen to the folk tales, and aspirations of a People, a Nation,
+                    a way of life!
+                </p>
+                <br />
+                @* <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>*@
+            </div>
+
+            <div class="col-md-4">
+                <h2 style="text-align:center;"> Calendar and Events</h2>
+                <img src="~/Images/Home/calendar.jpg" class="rounded-circle" alt="Cinque Terre" width="300" height="200">
+                <br /><br />
+                <p style="font-family:Bell MT; font-size:16px;">
+                    Make room in your calendar for an island packed with activities. From Jazz festival to Heritage Month, come let us show you
+                    St Lucia A2ZSuntours way.
+                </p>
+                <br /><br /><br />
+                @* <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>*@
+            </div>
+
+
+            <div class="col-md-4">
+                <h2 style="text-align:center;"> Tours</h2>
+                <img src="~/Images/Home/tours.jpg" class="rounded-circle" alt="Cinque Terre" width="300" height="200" >
+                <br /><br />
+                <p style="font-family:Bell MT; font-size:16px;">It's in our nature, here at A2ZSuntours, come, book your tour with us and experience a whole new side of St Lucia, with expert experience.</p>
+                <br /><br /><br />
+               @* <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>*@
+            </div>
+        </div>
+    </div>
+</body>
+</html>

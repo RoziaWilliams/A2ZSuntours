@@ -1,0 +1,346 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+   * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #14343e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: 14343e;
+}
+
+.container {
+  border-radius: 5px;
+ /* background-color: #f2f2f2;*/
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@*@media screen and (max-width: 600px)*@ {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+
+
+}
+
+/* Style the footer */
+
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@*media (max-width: 600px) *@{
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+        .map{
+            text-align:center;
+        }
+
+        .layout {
+            padding-left: 300px;
+            padding-right: 300px;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            padding-bottom: 10px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
+        .form-controls {
+            display: block;
+            width: 450px;
+            height: 150px;
+            padding: 6px 12px;
+            padding-bottom: 40px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+
+        div.headline {
+            width: 450px;
+            height: 150px;
+        }
+
+        .size {
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <h2 style="font-family:'Bell MT'; margin-top:70px;">A2ZSuntours</h2>
+
+    </div>
+   
+    <section>
+        <nav>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="500" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=saint%20lucia&t=&z=11&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.org">embedgooglemap.org</a></div>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                        height: 500px;
+                        width: 500px;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                        height: 500px;
+                        width: 500px;
+                        margin-top: 30px;
+                        align-content: center;
+                    }
+                </style>
+            </div>
+        </nav>
+
+        <article>
+            <p style="text-align:center">You're just an email away from an exciting tour!!.</p>
+
+            <div class="container">
+                <form action="/action_page.php">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="email">Email Address</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="email" name="email" placeholder="Your email address..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="city">City</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="city" name="city" placeholder="City you live..">
+                        </div>
+                    </div><div class="row">
+                        <div class="col-25">
+                            <label for="state">State</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="state" name="state" placeholder="State you live..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="Tours">Tours</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="Tours" name="Tours">
+                                <option value="piton">Piton Hike</option>
+                                <option value="sulphur">Sulphur Springs</option>
+                                <option value="marina">Rodney Bay Marina</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="Pnum">Phone Number</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="Pnum" name="Pnum" placeholder="Your phone number..">
+                        </div>
+                    </div>
+                    <br>
+
+                    @*<div class="row">
+            <div class="col-25">
+                <label for="Subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="subject" name="subject" placeholder="Message Subject..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Subject</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+        </div>*@
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </article>
+    </section>
+    @*<div class="layout">
+            <h2 style="padding-top:50px;">Contact Us </h2>
+            <fieldset>
+                <legend>
+                    Send Email
+                </legend>
+                @using (Html.BeginForm())
+                {
+                    @Html.ValidationSummary()
+                    <p>Name: </p>
+                    <p>@Html.TextBoxFor(m => m.Name, new { Class = "form-control" })</p>
+
+                    <p>Email: </p>
+                    <p>@Html.TextBoxFor(m => m.Email, new { Class = "form-control" })</p>
+
+                    <p>Phone Number: </p>
+                    <p>@Html.TextBoxFor(m => m.PhoneNumber, new { Class = "form-control" })</p>
+
+                    <p>Subject: </p>
+                    <p>@Html.TextBoxFor(m => m.Subject, new { Class = "form-control" })</p>
+
+                    <div class="headline">
+                        <p>Message: </p>
+                        <p>@Html.EditorFor(m => m.Message, new { htmlAttributes = new { @class = "form-controls" } })</p>
+
+                    </div>
+
+                    <input type="submit" style="margin-top:60px;" value="Send" />
+                }
+            </fieldset>
+        </div><br />*@
+
+
+
+</body>
+</html>
+

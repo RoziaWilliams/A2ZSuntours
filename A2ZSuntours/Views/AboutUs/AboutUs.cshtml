@@ -1,0 +1,145 @@
+﻿
+@{
+    ViewBag.Title = "AboutUs";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@*.container {
+
+
+}
+        *@
+h2{
+            font-size:36px;
+        }
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@*@media screen and (max-width: 1000px)}*@ {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+
+  img {
+    margin: auto;
+  }
+}
+    </style>
+</head>
+<body style="padding-top:50px;">
+
+    <div style="text-align:center">
+        <h2 style="padding-bottom:60px;">About Us</h2>
+        
+    </div>
+
+    <!-- The App Section -->
+    <div class="container" style="padding-bottom:20px;" >
+        <div class="row" >
+            <div class="column-66" padding-bottom: 50px;>
+                <h2 class="large-font" style="font-family: 'Book Antiqua'"> A2ZSunTours</h2>
+                <!-- <h1 class="large-font" style="color:midnightblue;"><b>The Business</b></h1>-->
+                <p>
+                    <span style="font-size:24px">We make it Happen!</span> A2ZSuntours was founded by Venantius Popo in May 2005.
+                    Taxi services include but are not limited to, single, couples and family trips, to historical landmarks, events,
+                    airports and hotel destinations and much more. A2ZSuntours also assist in booking other tours in conjunction to
+                    your destination.
+                    Why wait? Book now with A2ZSuntours and see St Lucia as you have never seen before.
+                </p>
+                
+            </div>
+            <div class="column-33">
+                <img src="~/Images/About Us/adv.jpg" alt="L" width="335" height="471">
+            </div>
+        </div>
+    </div>
+
+    <!-- Clarity Section -->
+    <div class="container" style="background-color:#d8e6ee; padding-bottom:150px;">
+        <div class="row">
+            <div class="column-33">
+                <img src="~/Images/About Us/VP.jpg" alt="Venantious Popo" width="300" height="350">
+            </div>
+            <div class="column-66">
+                <h2 class="large-font" style="font-family: 'Book Antiqua'; padding-bottom:10px;"> Venantius Popo</h2>
+                
+                <p style="font-size:14px;"><span style="font-size:24px; ">The Man for the Job!! </span> Venantius has served tourists, business customers, 
+                and locals for over 20 years. With his love for history, and in particular, that of his beautiful island, Mr Popo 
+                offers exciting tours and historical facts during his service. Dedicated to enlightening all his customers, Mr Popo
+                eagerly embarks every trip with professionalism.</p>
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- The App Section
+    <div class="container">
+        <div class="row">
+            <div class="column-66">
+                <h1 class="xlarge-font"><b>The App</b></h1>
+                <h1 class="large-font" style="color:MediumSeaGreen;"><b>Why buy it?</b></h1>
+                <p><span style="font-size:36px">Take photos like a pro.</span> You should buy this app because lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <button class="button">Download Application</button>
+            </div>
+            <div class="column-33">
+                <img src="/w3images/img_app.jpg" width="335" height="471">
+            </div>
+        </div>
+    </div>-->
+
+</body>
+</html>

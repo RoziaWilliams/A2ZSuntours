@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@Scripts.Render("~/bundles/jquery")
+@model A2ZSuntours.ViewModels.ContactUsViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .layout{
+            padding-left:300px;
+            padding-right:300px;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 34px;
+            padding: 6px 12px;
+            padding-bottom:10px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        .form-controls {
+            display: block;
+            width: 450px;
+            height: 150px;
+            padding: 6px 12px;
+            padding-bottom: 40px;
+            font-size: 14px;
+            line-height: 1.42857143;
+            color: #555;
+            background-color: #fff;
+            background-image: none;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+            -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+            -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+            transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+        }
+        p {
+            padding-bottom:10px;
+        }
+        div.headline {
+            width: 450px;
+            height: 150px;
+        }
+        .size {
+            width: 50px;
+            height:30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layout">
+        <h2 style="padding-top:50px;">Contact Us </h2>
+        <fieldset>
+            <legend>
+                Send Email
+            </legend>
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary()
+                <p>Name: </p>
+                <p>@Html.TextBoxFor(m => m.Name, new { Class = "form-control" })</p>
+
+                <p>Email: </p>
+                <p>@Html.TextBoxFor(m => m.Email, new { Class = "form-control" })</p>
+
+                <p>Phone Number: </p>
+                <p>@Html.TextBoxFor(m => m.PhoneNumber, new { Class = "form-control" })</p>
+
+                <p>Subject: </p>
+                <p>@Html.TextBoxFor(m => m.Subject, new { Class = "form-control" })</p>
+
+                <div class="headline">
+                    <p>Message: </p>
+                    <p>@Html.EditorFor(m => m.Message, new { htmlAttributes = new { @class = "form-controls" } })</p>
+
+                </div>
+
+                <input type="submit" style="margin-top:60px;" value="Send" />
+            }
+        </fieldset>
+    </div><br />
+   
+    </body>
+</html>

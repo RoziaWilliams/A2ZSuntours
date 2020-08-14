@@ -1,0 +1,166 @@
+﻿
+@{
+    ViewBag.Title = "History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            
+            font-family: Arial;
+            padding-top:60px;
+        }
+        .containerB {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+        /* The grid: Four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            font-family:Harrington;
+        }
+
+            /* Style the images inside the grid */
+            .column img {
+                opacity: 0.8;
+                cursor: pointer;
+                height: 150px;
+                width: 80px;
+                border-radius: 8px;
+                
+            }
+        h2{
+            padding-bottom:10px;
+        }
+        p {
+           font-family:'Bell MT';
+           font-size:16px;
+           padding-top:40px;
+           
+        }
+
+            }
+                .column img:hover {
+                    opacity: 1;
+                }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The expanding image container */
+        .containerH {
+            position: relative;
+            display: none;
+        }
+            .containerH img {
+                border-radius: 8px;
+            }
+        .containerP{
+            margin-left:50px;
+            margin-right:50px;
+        }
+        desc {
+            width: 100px;
+            text-align: justify;
+            
+            width: 800px;
+        }
+        /* Expanding image text */
+        #imgtext {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            color: white;
+            font-size: 20px;
+        }
+
+        /* Closable button inside the expanded image */
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: white;
+            font-size: 35px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="containerB">
+        <div style="text-align:center" >
+            <h2 style="font-style:italic;" >St Lucia's History</h2>
+            <hr>
+            <p style="padding-bottom:10px; font-size:16px;">  St Lucia's history is just one click away! </p>
+        </div>
+    <div class="containerP" >
+        <div class="row">
+            <div class="column" >
+                <img src="~/Images/History/canon.jpg" alt="Nature" style="width:75%" onclick="myFunction(this);">
+            </div>
+
+            <div class="column">
+                <img src="~/Images/History/PI.jpg" alt="Snow" style="width:75%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="~/Images/History/sulphur.jpg" alt="Mountains" style="width:75%" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="~/Images/History/waterfall.jpg" alt="Lights let us taYour About Us page should be: Informative. 
+                     It doesn't always have to tell the whole story, but it should at least provide people with an idea of 
+                     who and what you are. Contain social proof, testimonials, and some personal information that viewers can
+                     relate to such as education, family, etc.Your About Us page should be: Informative. It doesn't always have
+                     to tell the whole story, but it should at least provide people with an idea of who and what you are. Contain
+                     social proof, testimonials, and some personal information that viewers can relate to such as education, family
+                     , etc.Your About Us page should be: Informative. It doesn't always have to tell the whole story, but it should
+                     at least provide people with an idea of who  provide people with an idea of who and what you are. Contain social
+                     proof, testimonials, and some personal information that viewers can relate to such as education, family, etc." 
+                     style="width:75%" onclick="myFunction(this);">
+            </div>
+        </div>
+    </div>
+
+    <div class="containerH">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <img id="expandedImg" style="width:60%" class="center-block">
+        <div class="desc">
+            <p id="demo">here</p>
+        </div>
+    </div>
+
+    <script>
+
+        function myFunction(imgs) {
+            var expandImg = document.getElementById("expandedImg");
+
+            var demot = document.getElementById("demo");
+            expandImg.src = imgs.src;
+
+            demot.innerHTML = imgs.alt;
+            expandImg.parentElement.style.display = "block";
+
+        }
+    </script>
+
+    </div>
+</body>
+</html>
+
+
+
+
